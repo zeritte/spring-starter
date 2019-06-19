@@ -5,19 +5,24 @@ import lombok.Data;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.util.Date;
 
 @Data
 @Entity
 class Employee {
 
     private @Id @GeneratedValue Long id;
-    private String name;
-    private String role;
+    private String firstname;
+    private String lastname;
+    private Boolean enabled;
+    private Date created_at;
 
     Employee() {}
 
-    Employee(String name, String role) {
-        this.name = name;
-        this.role = role;
+    Employee(String firstname, String lastname, Boolean enabled) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.enabled = enabled;
+        this.created_at = new Date();
     }
 }
