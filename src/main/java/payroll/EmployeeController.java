@@ -1,8 +1,8 @@
 package payroll;
 
-import java.util.List;
-
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @CrossOrigin
@@ -18,7 +18,7 @@ class EmployeeController {
 
     @GetMapping("/employees")
     List<Employee> all() {
-        return repository.findAll();
+        return repository.findAllByEnabledIsTrue();
     }
 
     @PostMapping("/employees")
