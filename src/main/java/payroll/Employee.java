@@ -19,10 +19,10 @@ class Employee {
 
     Employee() {}
 
-    Employee(String firstname, String lastname, Boolean enabled) {
+    Employee(String firstname, String lastname) {
         this.firstname = firstname;
         this.lastname = lastname;
-        this.enabled = enabled;
+        this.enabled = true;
         this.created_at = new Date();
     }
 }

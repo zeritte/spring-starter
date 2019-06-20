@@ -28,7 +28,8 @@ class EmployeeController {
 
     @PostMapping("/employees")
     Employee newEmployee(@RequestBody Employee newEmployee) {
-        return repository.save(newEmployee);
+        Employee edited = new Employee(newEmployee.getFirstname(), newEmployee.getLastname());
+        return repository.save(edited);
     }
 
     // Single item
@@ -52,7 +53,8 @@ class EmployeeController {
                 })
                 .orElseGet(() -> {
                     newEmployee.setId(id);
-                    return repository.save(newEmployee);
+                    Employee edited = new Employee(newEmployee.getFirstname(), newEmployee.getLastname());
+                    return repository.save(edited);
                 });
     }
 
