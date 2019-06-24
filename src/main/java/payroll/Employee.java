@@ -11,18 +11,22 @@ import java.util.Date;
 @Entity
 class Employee {
 
-    private @Id @GeneratedValue Long id;
-    private String firstname;
-    private String lastname;
+    @Id
+    @GeneratedValue
+    private Long id;
+
+    private String firstName;
+    private String lastName;
     private Boolean enabled;
-    private Date created_at;
+    private Date createDate;
 
-    Employee() {}
+    Employee() {
+    }
 
-    Employee(String firstname, String lastname) {
-        this.firstname = firstname;
-        this.lastname = lastname;
+    Employee(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.enabled = true;
-        this.created_at = new Date();
+        this.createDate = new Date();
     }
 }

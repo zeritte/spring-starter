@@ -23,7 +23,7 @@ class EmployeeController {
 
     @PostMapping("/employees")
     Employee newEmployee(@RequestBody Employee newEmployee) {
-        Employee edited = new Employee(newEmployee.getFirstname(), newEmployee.getLastname());
+        Employee edited = new Employee(newEmployee.getFirstName(), newEmployee.getLastName());
         return repository.save(edited);
     }
 
@@ -41,14 +41,14 @@ class EmployeeController {
 
         return repository.findById(id)
                 .map(employee -> {
-                    employee.setFirstname(newEmployee.getFirstname());
-                    employee.setLastname(newEmployee.getLastname());
+                    employee.setFirstName(newEmployee.getFirstName());
+                    employee.setLastName(newEmployee.getLastName());
                     employee.setEnabled(newEmployee.getEnabled());
                     return repository.save(employee);
                 })
                 .orElseGet(() -> {
                     newEmployee.setId(id);
-                    Employee edited = new Employee(newEmployee.getFirstname(), newEmployee.getLastname());
+                    Employee edited = new Employee(newEmployee.getFirstName(), newEmployee.getLastName());
                     return repository.save(edited);
                 });
     }
