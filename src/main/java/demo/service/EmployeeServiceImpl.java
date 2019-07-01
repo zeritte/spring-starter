@@ -36,6 +36,7 @@ public class EmployeeServiceImpl implements EmployeeService {
             return null;
         }
         employee.setCreateDate(new Date());
+        employee.setEnabled(true);
         return employeeRepository.save(employee);
     }
 
