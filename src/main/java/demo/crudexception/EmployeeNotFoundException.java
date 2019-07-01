@@ -1,4 +1,4 @@
-package salih.crudexception;
+package demo.crudexception;
 
 public class EmployeeNotFoundException extends RuntimeException {
 

@@ -1,10 +1,10 @@
-package salih.service;
+package demo.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import salih.crudexception.EmployeeNotFoundException;
-import salih.entity.Employee;
-import salih.repository.EmployeeRepository;
+import demo.crudexception.EmployeeNotFoundException;
+import demo.entity.Employee;
+import demo.repository.EmployeeRepository;
 
 import java.util.Date;
 import java.util.List;

@@ -1,7 +1,7 @@
-package salih.service;
+package demo.service;
 
 
-import salih.entity.Employee;
+import demo.entity.Employee;
 
 import java.util.List;
 

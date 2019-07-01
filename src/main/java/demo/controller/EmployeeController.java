@@ -1,9 +1,9 @@
-package salih.controller;
+package demo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import salih.entity.Employee;
-import salih.service.EmployeeService;
+import demo.entity.Employee;
+import demo.service.EmployeeService;
 
 import java.util.List;
 

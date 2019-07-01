@@ -1,4 +1,4 @@
-package salih.entity;
+package demo.entity;
 
 import lombok.Data;
 
